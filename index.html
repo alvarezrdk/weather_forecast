@@ -13,70 +13,100 @@
     </head>
 
     <body>
-        <section class="mainTitle">
-            <div>
-            <h1>Weather Dashboard</h1>
+        <div class="row align-items-center mb-3 mainTitle">
+            <div class="col gx-4 text-center text-primary-emphasis bg-primary-subtle shadow p-3 mb-5 bg-body-tertiary rounded">
+                <h1>Weather Dashboard</h1>
             </div>
-        </section>
-        <section class="container">
-            <section class="searchSection">
-                <div class="searchCity">
-                    <a>Search City</a>
-                    <input type="text" class="searchField" data-provide="typeahead" placeholder="Enter Location"/>
-                    <button class="searchButton">Search</button>
+        </div>
+        <form class="container-fluid">
+            <div class="row">
+                <div class="col-2 searchSection">
+                    <div class="mb-3 searchCity">
+                        <label class="form-label">Search City</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control searchField" data-provide="typeahead" arial-label="Enter Location" placeholder="Enter Location"/>
+                        </div>
+                        <button type="button" class=" col btn bg-primary-subtle btn-lg searchButton">Search</button>
+                    </div>
+                    <div class="row-cols-lg-auto p-3 historyItems"></div>
                 </div>
-                <div class="historyItems"></div>
-            </section>
-            <section class="fullForecast">
-                <div class="todayForecast">
-                    <h1 class="cCity"></h1>
-                    <img class="weather_icon" src="" alt="Weather Icon">
-                    <p class="cTemp"></p>
-                    <p class="cWind"></p>
-                    <p class="cHumid"></p>
-                </div>
-                <div class="fiveDays">
-                    <h1>5 Days Forecast:</h1>
-                    <div class="fivebox">
-                        <div class="boxes" id="box1">
-                            <h1 class="cDate1"></h1>
-                            <img class="weather_icon1" src="" alt="Weather Icon">
-                            <p class="cTemp1"></p>
-                            <p class="cWind1"></p>
-                            <p class="cHumid1"></p>
-                        </div>
-                        <div class="boxes" id="box2">
-                            <h1 class="cDate2"></h1>
-                            <img class="weather_icon2" src="" alt="Weather Icon">
-                            <p class="cTemp2"></p>
-                            <p class="cWind2"></p>
-                            <p class="cHumid2"></p>
-                        </div>
-                        <div class="boxes" id="box3">
-                            <h1 class="cDate3"></h1>
-                            <img class="weather_icon3" src="" alt="Weather Icon">
-                            <p class="cTemp3"></p>
-                            <p class="cWind3"></p>
-                            <p class="cHumid3"></p>
-                        </div>
-                        <div class="boxes" id="box4">
-                            <h1 class="cDate4"></h1>
-                            <img class="weather_icon3" src="" alt="Weather Icon">
-                            <p class="cTemp4"></p>
-                            <p class="cWind4"></p>
-                            <p class="cHumid4"></p>
-                        </div>
-                        <div class="boxes" id="box5">
-                            <h1 class="cDate5"></h1>
-                            <img class="weather_icon3" src="" alt="Weather Icon">
-                            <p class="cTemp5"></p>
-                            <p class="cWind5"></p>
-                            <p class="cHumid5"></p>
+                <div class="col fullForecast">
+                    <div class="col-10 todayForecast">
+                        <div class="card bg-primary-subtle border-secondary-subtle shadow p-3 mb-5 bg-body-tertiary rounded">
+                            <div class="card-body">
+                                <h1 class="cCity"></h1>
+                                <img class="weather_icon" src="" alt="Weather Icon">
+                                <p class="cTemp"></p>
+                                <p class="cWind"></p>
+                                <p class="cHumid"></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </section>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label">5 Days Forecast:</label>
+                        </div>
+                    </div>
+                    <div class="row text-center fivebox">
+                                <div class="col-2" id="box1">
+                                    <div class="card bg-primary-subtle shadow p-3 mb-5 bg-body-tertiary rounded">
+                                        <div class="card-body">
+                                            <h4 class="cDate1"></h4>
+                                            <img class="weather_icon1" src="" alt="Weather Icon">
+                                            <p class="cTemp1"></p>
+                                            <p class="cWind1"></p>
+                                            <p class="cHumid1"></p>
+                                        </div>
+                                    </div>
+                                </div>    
+                                <div class="col-2" id="box2">
+                                    <div class="card bg-primary-subtle shadow p-3 mb-5 bg-body-tertiary rounded">
+                                        <div class="card-body">
+                                            <h4 class="cDate2"></h4>
+                                            <img class="weather_icon2" src="" alt="Weather Icon">
+                                            <p class="cTemp2"></p>
+                                            <p class="cWind2"></p>
+                                            <p class="cHumid2"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" id="box3">
+                                    <div class="card bg-primary-subtle shadow p-3 mb-5 bg-body-tertiary rounded">
+                                        <div class="card-body">
+                                            <h4 class="cDate3"></h4>
+                                            <img class="weather_icon3" src="" alt="Weather Icon">
+                                            <p class="cTemp3"></p>
+                                            <p class="cWind3"></p>
+                                            <p class="cHumid3"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" id="box4">
+                                    <div class="card bg-primary-subtle shadow p-3 mb-5 bg-body-tertiary rounded">
+                                        <div class="card-body">
+                                            <h4 class="cDate4"></h4>
+                                            <img class="weather_icon4" src="" alt="Weather Icon">
+                                            <p class="cTemp4"></p>
+                                            <p class="cWind4"></p>
+                                            <p class="cHumid4"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" id="box5">
+                                    <div class="card bg-primary-subtle shadow p-3 mb-5 bg-body-tertiary rounded">
+                                        <div class="card-body">
+                                            <h4 class="cDate5"></h4>
+                                            <img class="weather_icon5" src="" alt="Weather Icon">
+                                            <p class="cTemp5"></p>
+                                            <p class="cWind5"></p>
+                                            <p class="cHumid5"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>        
+            </div>
+        </form>
         <script src="./js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     </body>
