@@ -21,7 +21,7 @@ function citySearch() {
             inputField = $('.searchField').val();
         }
 
-        urlgeo = 'http://api.openweathermap.org/geo/1.0/direct?q='+inputField+',US&appid=01c11dcf6124a0d509e5945bd2fe27be';
+        urlgeo = 'https://api.openweathermap.org/geo/1.0/direct?q='+inputField+',US&appid=01c11dcf6124a0d509e5945bd2fe27be';
         
 
         if (rSearch.find( function (found) {
@@ -70,7 +70,7 @@ function citySearch() {
 }
 
 function apigeo() {
-    var urlgeo = 'http://api.openweathermap.org/geo/1.0/direct?q='+inputField+'&limit=3&appid=01c11dcf6124a0d509e5945bd2fe27be';
+    var urlgeo = 'https://api.openweathermap.org/geo/1.0/direct?q='+inputField+'&limit=3&appid=01c11dcf6124a0d509e5945bd2fe27be';
         $.ajax(urlgeo).done(function (response) {
             var array = response;
             cityList.push({
