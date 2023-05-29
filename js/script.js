@@ -7,14 +7,6 @@ var i = 0;
 var inputField;
 var $input = $(".searchField");
 
-function autocomplete() {
-
-    $input.typeahead({
-		source: ["Miami","Tampa","Orlando"],
-        autoSelect: true
-        });
-}
-
 
 function citySearch() {
     var historyItem = document.createElement("button");
@@ -39,7 +31,7 @@ function citySearch() {
         } else if ($('.searchField').val() !== "") {
             $('.historyItems').last().append(historyItem);
             $(historyItem).attr("type", "button");
-            $(historyItem).attr("class", "col btn btn-outline-secondary btnList");
+            $(historyItem).attr("class", "col btn bg-primary-subtle btnList");
             $(historyItem).attr("id", "opt-"+cityList.length);
             localStorage.setItem("opt-"+cityList.length, $('.searchField').val());
             i = cityList.length;
@@ -78,7 +70,7 @@ function citySearch() {
 }
 
 function apigeo() {
-    var urlgeo = 'http://api.openweathermap.org/geo/1.0/direct?q='+inputField+',US&appid=01c11dcf6124a0d509e5945bd2fe27be';
+    var urlgeo = 'http://api.openweathermap.org/geo/1.0/direct?q='+inputField+'&limit=3&appid=01c11dcf6124a0d509e5945bd2fe27be';
         $.ajax(urlgeo).done(function (response) {
             var array = response;
             cityList.push({
@@ -140,5 +132,3 @@ $(".btnList").on('click', function() {
     $('.searchField').val(localStorage.getItem($(this).attr("id")));
     citySearch();
       });
-
-$('.searchField').on("keydown", autocomplete)
