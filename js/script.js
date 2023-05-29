@@ -38,7 +38,8 @@ function citySearch() {
             //Do Nothing
         } else if ($('.searchField').val() !== "") {
             $('.historyItems').last().append(historyItem);
-            $(historyItem).attr("class", "btnList");
+            $(historyItem).attr("type", "button");
+            $(historyItem).attr("class", "col btn btn-outline-secondary btnList");
             $(historyItem).attr("id", "opt-"+cityList.length);
             localStorage.setItem("opt-"+cityList.length, $('.searchField').val());
             i = cityList.length;
@@ -60,7 +61,8 @@ function citySearch() {
                         } else {
                         rSearch.push(city);
                         $('.historyItems').last().append(historyItem);
-                        $(historyItem).attr("class", "btnList");
+                        $(historyItem).attr("type", "button");
+                        $(historyItem).attr("class", "col btn bg-primary-subtle btnList");
                         $(historyItem).attr("id", option);
                         $(historyItem).html(rSearch[x]);
                         cityList.push({city: rSearch[x]});
